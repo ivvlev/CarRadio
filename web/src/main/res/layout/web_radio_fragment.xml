@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background"
+    tools:context="com.ivvlev.car.radio.web.WebRadioFragment">
+
+    <!--Выделяет место под часы на Activity-->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_alignParentTop="true"
+            android:orientation="horizontal" />
+
+        <TextView
+            android:id="@+id/text_display_main"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="8"
+            android:gravity="center"
+            android:text="Not Selected"
+            android:textColor="@color/white"
+            android:textAlignment="center"
+            android:textSize="100sp" />
+
+        <TextView
+            android:id="@+id/text_display_status"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@color/ltgray"
+            android:text="Paused"
+            android:textAlignment="center"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <com.ivvlev.car.framework.PageableListView
+        android:id="@+id/web_radio_station_pager"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp"
+        android:background="@drawable/fl_bg">
+    </com.ivvlev.car.framework.PageableListView>
+
+</LinearLayout>

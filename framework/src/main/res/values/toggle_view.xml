@@ -1,0 +1,10 @@
+<resources>
+    <declare-styleable name="ToggleView">
+        <attr name="textColorOn" format="color|reference" />
+        <attr name="textColorOff" format="color|reference" />
+        <attr name="textOn" format="string" />
+        <attr name="textOff" format="string" />
+        <attr name="backgroundOn" format="color|reference" />
+        <attr name="backgroundOff" format="color|reference" />
+    </declare-styleable>
+</resources>

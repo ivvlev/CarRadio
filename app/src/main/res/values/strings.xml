@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">CarRadio</string>
+    <string name="title_activity_main">CarRadio</string>
+    <string name="tab_air_text">AIR</string>
+    <string name="tab_web_text">WEB</string>
+    <string name="button_eq_text">EQ</string>
+    <string name="action_settings">Settings</string>
+</resources>

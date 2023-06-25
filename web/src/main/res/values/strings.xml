@@ -1,0 +1,4 @@
+<resources>
+    <string name="action_autoscan">Autoscan</string>
+    <string name="action_import_list">Import…</string>
+</resources>

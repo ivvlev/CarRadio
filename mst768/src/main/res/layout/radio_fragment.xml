@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    tools:context="com.ivvlev.car.radio.mst768.RadioFragment">
+
+    <!--<View-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="40dp"-->
+    <!--android:background="@color/bottom_bar_border" />-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:id="@+id/button_band_ToggleGroup"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:orientation="vertical">
+            <!--android:background="@drawable/breadcrumb_vector_right_100x300"-->
+
+            <com.ivvlev.car.framework.ToggleColorButton
+                android:id="@+id/button_band_FM1"
+                style="?android:buttonBarButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:background="#00FFFFFF"
+                android:checked="true"
+                android:gravity="center_vertical"
+                android:text="FM1"
+                android:textAlignment="center"
+                android:textColor="@color/ltgray"
+                android:textSize="25sp"
+                app:backgroundOff="#00FFFFFF"
+                app:backgroundOn="#00FFFFFF"
+                app:textColorOff="@color/ltgray"
+                app:textColorOn="@color/red" />
+
+            <com.ivvlev.car.framework.ToggleColorButton
+                android:id="@+id/button_band_FM2"
+                style="?android:buttonBarButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:background="#00FFFFFF"
+                android:gravity="center_vertical"
+                android:text="FM2"
+                android:textAlignment="center"
+                android:textColor="@color/ltgray"
+                android:textSize="25sp"
+                app:backgroundOff="#00FFFFFF"
+                app:backgroundOn="#00FFFFFF"
+                app:textColorOff="@color/ltgray"
+                app:textColorOn="@color/red" />
+
+            <com.ivvlev.car.framework.ToggleColorButton
+                android:id="@+id/button_band_AM"
+                style="?android:buttonBarButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:background="#00FFFFFF"
+                android:gravity="center_vertical"
+                android:text="AM"
+                android:textAlignment="center"
+                android:textColor="@color/ltgray"
+                android:textSize="25sp"
+                app:backgroundOff="#00FFFFFF"
+                app:backgroundOn="#00FFFFFF"
+                app:textColorOff="@color/ltgray"
+                app:textColorOn="@color/red" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <!--Выделяет место под часы на Activity-->
+                <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="100dp"-->
+                <!--android:layout_alignParentTop="true"-->
+                <!--android:orientation="horizontal" />-->
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="100dp"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="4"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/prevButton"
+                            style="@style/navButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentStart="true"
+                            android:layout_gravity="center_vertical"
+                            android:background="@drawable/ic_prev"
+                            android:gravity="center" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="100dp"
+                            android:layout_marginRight="100dp">
+
+                            <TextView
+                                android:id="@+id/display_RDSPTY_text"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:gravity="center"
+                                android:text="RDSPTY"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/display_freq_text"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:gravity="center"
+                                android:text="87.50 МГц"
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                android:textSize="65sp" />
+
+                            <TextView
+                                android:id="@+id/display_RDSPS_text"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:gravity="center"
+                                android:text=""
+                                android:textColor="@color/white"
+                                android:textSize="20sp" />
+
+                        </RelativeLayout>
+
+                        <Button
+                            android:id="@+id/nextButton"
+                            style="@style/navButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentEnd="true"
+                            android:background="@drawable/ic_next"
+                            android:gravity="center" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="600dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/breadcrumb_vector_top_600x60"
+                        android:gravity="center">
+
+                        <LinearLayout
+                            android:layout_width="440dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:orientation="horizontal">
+
+                            <com.ivvlev.car.framework.ToggleColorButton
+                                android:id="@+id/checkBox_REG"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="#00FFFFFF"
+                                android:gravity="center_vertical"
+                                android:text="REG"
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                app:backgroundOff="#00FFFFFF"
+                                app:backgroundOn="#00FFFFFF"
+                                app:textColorOff="@color/ltgray"
+                                app:textColorOn="@color/red"
+                                app:textOff="REG"
+                                app:textOn="REG" />
+
+                            <com.ivvlev.car.framework.ToggleColorButton
+                                android:id="@+id/checkBox_TA"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="#00FFFFFF"
+                                android:gravity="center_vertical"
+                                android:text="TA"
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                app:backgroundOff="#00FFFFFF"
+                                app:backgroundOn="#00FFFFFF"
+                                app:textColorOff="@color/ltgray"
+                                app:textColorOn="@color/red"
+                                app:textOff="TA"
+                                app:textOn="TA" />
+
+                            <com.ivvlev.car.framework.ToggleColorButton
+                                android:id="@+id/checkBox_AF"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="#00FFFFFF"
+                                android:gravity="center_vertical"
+                                android:text="AF"
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                app:backgroundOff="#00FFFFFF"
+                                app:backgroundOn="#00FFFFFF"
+                                app:textColorOff="@color/ltgray"
+                                app:textColorOn="@color/red"
+                                app:textOff="AF"
+                                app:textOn="AF" />
+
+                            <com.ivvlev.car.framework.ToggleColorButton
+                                android:id="@+id/checkBox_LOC"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="#00FFFFFF"
+                                android:gravity="center_vertical"
+                                android:text="LOC"
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                app:backgroundOff="#00FFFFFF"
+                                app:backgroundOn="#00FFFFFF"
+                                app:textColorOff="@color/ltgray"
+                                app:textColorOn="@color/red"
+                                app:textOff="LOC"
+                                app:textOn="LOC" />
+
+                            <!--<ToggleButton-->
+                            <!--android:id="@+id/checkBox_PTY"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_height="match_parent"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:textOff="REG"-->
+                            <!--android:textOn="REG"-->
+                            <!--android:text="PTY" />-->
+
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:orientation="vertical">
+            <!--android:background="@drawable/breadcrumb_vector_left_100x300"-->
+
+            <com.ivvlev.car.framework.ToggleColorTextView
+                android:id="@+id/flag_TA"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="5dp"
+                android:text="TA"
+                android:textColor="@color/dkgray"
+                android:textIsSelectable="false"
+                android:textSize="25sp"
+                app:textColorOff="@color/dkgray"
+                app:textColorOn="@color/red"
+                app:textOff="TA"
+                app:textOn="TA" />
+
+            <com.ivvlev.car.framework.ToggleColorTextView
+                android:id="@+id/flag_TP"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="5dp"
+                android:text="TP"
+                android:textColor="@color/dkgray"
+                android:textIsSelectable="false"
+                android:textSize="25sp"
+                app:textColorOff="@color/dkgray"
+                app:textColorOn="@color/red"
+                app:textOff="TP"
+                app:textOn="TP" />
+
+            <com.ivvlev.car.framework.ToggleColorTextView
+                android:id="@+id/flag_ST"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="5dp"
+                android:text="ST"
+                android:textColor="@color/dkgray"
+                android:textIsSelectable="false"
+                android:textSize="25sp"
+                app:textColorOff="@color/dkgray"
+                app:textColorOn="@color/red"
+                app:textOff="ST"
+                app:textOn="ST" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.ivvlev.car.framework.PageableListView
+        android:id="@+id/radio_station_pager"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="0dp"
+        android:background="@drawable/fl_bg">
+
+    </com.ivvlev.car.framework.PageableListView>
+</LinearLayout>

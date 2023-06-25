@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="white">#FFFFFFFF</color>
+    <color name="red">#FFFF0000</color>
+    <color name="black">#FF000000</color>
+    <color name="dkgray">#FF444444</color>
+    <color name="gray">#FF888888</color>
+    <color name="ltgray">#FFCCCCCC</color>
+
+    <color name="background_toolbar">#FF111111</color>
+    <color name="background">#FF111111</color>
+
+    <color name="breadcrumb_light">#24FFFFFF</color>
+    <color name="breadcrumb_dark">#12FFFFFF</color>
+</resources>

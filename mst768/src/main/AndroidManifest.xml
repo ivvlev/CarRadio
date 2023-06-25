@@ -1,0 +1,11 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <application>
+        <service
+            android:name="com.ivvlev.car.radio.mst768.RadioService"
+            android:enabled="true"
+            android:exported="true" />
+    </application>
+
+</manifest>
